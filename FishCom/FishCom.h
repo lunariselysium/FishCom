@@ -10,7 +10,7 @@
     #error Wrong include order: MAVLINK_FISHCOM.H MUST NOT BE DIRECTLY USED. Include mavlink.h from the same directory instead or set ALL AND EVERY defines from MAVLINK.H manually accordingly, including the #define MAVLINK_H call.
 #endif
 
-#define MAVLINK_FISHCOM_XML_HASH 6214921265985737887
+#define MAVLINK_FISHCOM_XML_HASH -8446592116964645561
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,7 +23,7 @@ extern "C" {
 #endif
 
 #ifndef MAVLINK_MESSAGE_CRCS
-#define MAVLINK_MESSAGE_CRCS {{0, 136, 12, 12, 0, 0, 0}, {1, 8, 8, 8, 0, 0, 0}, {2, 68, 28, 28, 0, 0, 0}, {3, 134, 24, 24, 0, 0, 0}, {4, 79, 14, 14, 0, 0, 0}, {5, 255, 3, 3, 0, 0, 0}, {6, 250, 11, 11, 0, 0, 0}}
+#define MAVLINK_MESSAGE_CRCS {{0, 136, 12, 12, 0, 0, 0}, {1, 8, 8, 8, 0, 0, 0}, {2, 68, 28, 28, 0, 0, 0}, {3, 134, 24, 24, 0, 0, 0}, {4, 79, 14, 14, 0, 0, 0}, {5, 255, 3, 3, 0, 0, 0}, {6, 250, 11, 11, 0, 0, 0}, {7, 250, 1, 1, 0, 0, 0}}
 #endif
 
 #include "../protocol.h"
@@ -64,14 +64,15 @@ typedef enum CHS_SYSTEM_ID
 #include "./mavlink_msg_chs_servos_info.h"
 #include "./mavlink_msg_chs_manage_info.h"
 #include "./mavlink_msg_chs_remoter_info.h"
+#include "./mavlink_msg_chs_gpio_read.h"
 
 // base include
 
 
 
 #if MAVLINK_FISHCOM_XML_HASH == MAVLINK_PRIMARY_XML_HASH
-# define MAVLINK_MESSAGE_INFO {MAVLINK_MESSAGE_INFO_CHS_CTRL_INFO, MAVLINK_MESSAGE_INFO_CHS_MOTOR_INFO, MAVLINK_MESSAGE_INFO_CHS_ODOM_INFO, MAVLINK_MESSAGE_INFO_CHS_IMU_INFO, MAVLINK_MESSAGE_INFO_CHS_SERVOS_INFO, MAVLINK_MESSAGE_INFO_CHS_MANAGE_INFO, MAVLINK_MESSAGE_INFO_CHS_REMOTER_INFO}
-# define MAVLINK_MESSAGE_NAMES {{ "CHS_CTRL_INFO", 0 }, { "CHS_IMU_INFO", 3 }, { "CHS_MANAGE_INFO", 5 }, { "CHS_MOTOR_INFO", 1 }, { "CHS_ODOM_INFO", 2 }, { "CHS_REMOTER_INFO", 6 }, { "CHS_SERVOS_INFO", 4 }}
+# define MAVLINK_MESSAGE_INFO {MAVLINK_MESSAGE_INFO_CHS_CTRL_INFO, MAVLINK_MESSAGE_INFO_CHS_MOTOR_INFO, MAVLINK_MESSAGE_INFO_CHS_ODOM_INFO, MAVLINK_MESSAGE_INFO_CHS_IMU_INFO, MAVLINK_MESSAGE_INFO_CHS_SERVOS_INFO, MAVLINK_MESSAGE_INFO_CHS_MANAGE_INFO, MAVLINK_MESSAGE_INFO_CHS_REMOTER_INFO, MAVLINK_MESSAGE_INFO_CHS_GPIO_READ}
+# define MAVLINK_MESSAGE_NAMES {{ "CHS_CTRL_INFO", 0 }, { "CHS_GPIO_READ", 7 }, { "CHS_IMU_INFO", 3 }, { "CHS_MANAGE_INFO", 5 }, { "CHS_MOTOR_INFO", 1 }, { "CHS_ODOM_INFO", 2 }, { "CHS_REMOTER_INFO", 6 }, { "CHS_SERVOS_INFO", 4 }}
 # if MAVLINK_COMMAND_24BIT
 #  include "../mavlink_get_info.h"
 # endif

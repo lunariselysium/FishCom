@@ -69,6 +69,11 @@
 			<field type="int16_t" name="channel_3" instance="0" invalid="UINT16_MAX">-660 to +660. Right-Upward is orientation.</field>
 			<field type="int16_t" name="wheel" instance="0" invalid="UINT16_MAX">-660 to +660. Counter-clockwise is orientation.</field>
 		</message>
+		<!-- Feedback GPIO -->
+		<message id="7" name="CHS_GPIO_READ">
+			<description>Feedback input GPIO(7) information. Takes up the pin of S7</description>
+			<field type="uint8_t" name="level" instance="0" invalid="UINT8_MAX">Boolean. Set 1/0 to enable/disable chassis's close-loop control. Invalid with UINT8_MAX.</field>
+		</message>
 	</messages>
 
 </mavlink>

@@ -2,8 +2,8 @@
 *深圳科创学院2024高中生机器人冬令营 底盘通讯系统*   
 *InnoxSZ 2024 Robotics Winter Camp of High School Students.* 
 
-This is the protocol of Fish Chassis System(CHS). Based on Mavlink v2.     
-Author: qianwan.Jin
+This is the protocol of Fish Chassis System(CHS). Based on Mavlink v2. Modified for use on our robot    
+Original author: qianwan.Jin
 
 >Version: 2.2   
 Generate Date: 2024/01/31     
@@ -124,6 +124,13 @@ Feedback remoter message.
   | channel_2  | int16_t  | / | -660 to +660. Right-Upward is orientation. |
   | channel_3 | int16_t | / | -660 to +660. Right-Upward is orientation. |
   | wheel  | int16_t  | / | -660 to +660. Counter-clockwise is orientation. |
+
+- **chs_gpio_read**
+Feedback gpio input value.
+
+  | Field      | Type     | Units  | Description |
+  | ---------- | -------- | :----: | ----------- |
+  | level  | int8_t  | / | Boolean. Represents the value of GPIO 7. |
 
 
 ## Sample

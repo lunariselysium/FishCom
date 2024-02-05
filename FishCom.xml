@@ -72,7 +72,7 @@
 		<!-- Feedback GPIO -->
 		<message id="7" name="CHS_GPIO_READ">
 			<description>Feedback input GPIO(7) information. Takes up the pin of S7</description>
-			<field type="uint8_t" name="level" instance="0" invalid="UINT8_MAX">Boolean. Set 1/0 to enable/disable chassis's close-loop control. Invalid with UINT8_MAX.</field>
+			<field type="uint8_t" name="level" instance="0" invalid="UINT8_MAX">Boolean. Represents the value of GPIO 7.</field>
 		</message>
 	</messages>
 
